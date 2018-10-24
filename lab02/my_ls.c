@@ -18,11 +18,10 @@ void view_dir(char *dir_name)
     DIR *d = opendir(dir_name); 
     if (d == NULL) return;
 
-
     struct dirent *de;
     while ((de = readdir(d)) != NULL)
     {
-        if (de->d_name[0] != '.')
+        if (strcmp(de->d_name, ".") != 0 && strcmp(de->d_name, "..") != 0)
         {
             if (de->d_type == DT_DIR)
             {

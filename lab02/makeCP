@@ -1,0 +1,15 @@
+my_cp: my_cp.o
+	gcc -o my_cp my_cp.o
+
+my_cp.o: my_cp.c
+	gcc -c -Wall my_cp.c
+
+install: my_cp
+	mkdir ./bin/
+	mv ./my_cp ./bin/my_cp
+
+clean:
+	rm my_cp.o
+
+distclean: clean
+	rm -R ./bin/

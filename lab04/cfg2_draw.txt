@@ -1,0 +1,25 @@
+CFG:
+                                                                P
+                                                             /      \
+                                                          P          F1
+                                                       /     \ 
+                                                     P        F2
+                                                  /     \
+                                                P        F3
+                                             /    \  
+                                           P        F4
+                                         /  \
+                                        P     F5
+                                       / \
+                                      P    F6
+
+
+
+Tree:
+                                                    P
+                                        /   /     |    \     \   \
+                                       F1   F2   F3    F4    F5   F6
+
+Prints: 3 times 
+        "Running System ...Running Exec ...i+i
+        i*i"

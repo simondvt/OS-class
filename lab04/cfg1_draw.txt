@@ -1,0 +1,19 @@
+CFG:
+                                P
+                        /              \
+                       P                F1
+                    /    \           /      \  
+                  P       F2        F1       F11
+               /    \              /   \
+              P      F3           F1    F12
+
+
+Tree:
+                     P
+                  /  |  \
+                 F1  F2  F3
+                /   \
+              F11   F12 
+
+Prints: 2 times system / execlp with i = 0
+        2 times system / exelp with i = 1

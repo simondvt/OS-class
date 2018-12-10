@@ -1,0 +1,8 @@
+1. find / -name "*.exe" -size +1024c -type f -executable
+2. find / -name "*.c" -size +100c
+3. find / -type f -user $USER -regextype posix-extended -regex "(.*a.*A.*|.*A.*a.*)" -exec tail -n 3 "{}" \;
+4. find / -user $USER -mindepth 3 -maxdepth 5 -size +249c -regextype posix-extended -regex ".*/.{4}" -exec wc -c "{}" \;
+5. find / -regextype posix-extended -regex ".*/A.*z{3}.*\..{3}" -exec gzip "{}" \;
+6. find / -regextype posix-extended -regex ".*/bin" -exec ls "{}" \;
+7. find / -group $(id -g) -nouser $(id -u) -name "*.c"
+8. find / -maxdepth 1 -user $(id -u) -exec chmod go= "{}" \;
